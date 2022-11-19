@@ -1,11 +1,11 @@
-let date = new Date();
-let yyyy = date.getFullYear();
-let mm = date.getMonth() + 1; // Months start at 0!
-let dd = date.getDate();
-    
-let hh = date.toLocaleTimeString('it-IT');
+function dateUpdate(){
+    let date = new Date();
+    return date.getFullYear()+'-'+(date.getMonth() + 1)+'-'+date.getDate()+'T'+date.toLocaleTimeString('it-IT');
+};
 
-setInterval(async function(url = `https://durhack20221119161856.azurewebsites.net/api/GetSensorData?startDate=${yyyy}-${mm}-${dd}T${hh}`) {
+let date = dateUpdate();
+
+setInterval(async function(url = 'https://durhack20221119161856.azurewebsites.net/api/GetSensorData?startDate='+date) {
     const response =  await fetch(url, {
     method: 'GET',
     headers: {
@@ -19,7 +19,10 @@ setInterval(async function(url = `https://durhack20221119161856.azurewebsites.ne
     );
       
     console.log(filtered[0]);
-    
+    if (filtered[0]){
+        date = dateUpdate()
+    }
     // return filtered;
 }, 1000);
-    setInterval()
+setInterval()
+
