@@ -16,53 +16,55 @@
 
     </head>
 
-    <body>
+    <body style="background-color:#7BCCB5;">
 
-        <h1>My awesome space</h1>
+        <h1>Window tracker</h1>
         
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
-        
-        <div class="myDiv text-center">
-            <h2>This is a heading in a div element</h2>
-            <p>This is some text in a div element.</p>
+                <div class="myDiv text-center">
+            <h2>Heading</h2>
+            <p>Subheading.</p>
         </div>
         <div class="myDiv text-center">
-            <h2>This is a heading in a div element</h2>
-            <p>This is some text in a div element.</p>
+            <h2>CO<sub>2</sub> levels:</h2>
+            <p>500ppm.</p>
         </div>
+        <div class="myDiv text-center">
+            <h2>Countdown to closing window</h2>
+            <p style="color:#CC7A92" class="text-center" id="demo"></p>
 
-        <p class="text-center" id="demo"></p>
+            <script>
+            // count down time
+            // Get today's date and time
+            var now = new Date().getTime();        
+            var newDateObj = new Date(now + 1*60000);
 
-        <script>
-        // count down time
-        // Get today's date and time
-        var now = new Date().getTime();        
-        var newDateObj = new Date(now + 1*60000);
+            var demoElement = document.getElementById("demo");
+            // change 15 for minutes
+            // Update the count down every 1 second
+            var x = setInterval(function() {
 
-        var demoElement = document.getElementById("demo");
-        // change 15 for minutes
-        // Update the count down every 1 second
-        var x = setInterval(function() {
+                // Find the distance between now and the count down
+                now = new Date().getTime();
+                var distance = newDateObj - now;
 
-            // Find the distance between now and the count down
-            now = new Date().getTime();
-            var distance = newDateObj - now;
+                // Time calculations for minutes and seconds
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Time calculations for minutes and seconds
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                // Display the result in the element with id="demo"
+                demoElement.innerHTML = minutes + "m " + seconds + "s ";
 
-            // Display the result in the element with id="demo"
-            demoElement.innerHTML = minutes + "m " + seconds + "s ";
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    demoElement.innerHTML = "Close the window! save heat!";
+                }
+            }, 1000);
 
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                demoElement.innerHTML = "Close the window you filth";
-            }
-        }, 1000);
         </script>
+        </div>
     </body>
 
 </html>
