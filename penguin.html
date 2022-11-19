@@ -16,7 +16,7 @@
 
     </head>
 
-    <body style="background-color:#7BCCB5;">
+    <body style="background-color:#7BCCB5;" class="text-center">
 
         <h1>Window tracker</h1>
         
@@ -28,17 +28,17 @@
         </div>
         <div class="myDiv text-center">
             <h2>CO<sub>2</sub> levels:</h2>
-            <p>500ppm.</p>
+            <p>500ppm</p>
         </div>
         <div class="myDiv text-center">
-            <h2>Countdown to closing window</h2>
+            <h2>Countdown to close window</h2>
             <p style="color:#CC7A92" class="text-center" id="demo"></p>
 
             <script>
             // count down time
             // Get today's date and time
             var now = new Date().getTime();        
-            var newDateObj = new Date(now + 1*60000);
+            var newDateObj = new Date(now + 0.1*60000);
 
             var demoElement = document.getElementById("demo");
             // change 15 for minutes
@@ -60,6 +60,7 @@
                 if (distance < 0) {
                     clearInterval(x);
                     demoElement.innerHTML = "Close the window! save heat!";
+                    alert("close the window!");
                 }
             }, 1000);
 
