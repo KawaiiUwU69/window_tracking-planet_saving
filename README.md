@@ -24,3 +24,7 @@ Will shout at you to close the window in time - so you save the heat - save the 
 
 
 https://dev.azure.com/OscarOtter/Durhack%20-%20Waterstons%20Sensor%20Project/_wiki/wikis/Durhack---Waterstons-Sensor-Project.wiki/1/Getting-Started
+
+
+CO2 data:
+https://dev.azure.com/OscarOtter/Durhack%20-%20Waterstons%20Sensor%20Project/_wiki/wikis/Durhack---Waterstons-Sensor-Project.wiki/1/Getting-Started
