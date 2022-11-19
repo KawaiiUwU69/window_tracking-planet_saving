@@ -5,8 +5,13 @@ async function getData(url = 'https://durhack20221119161856.azurewebsites.net/ap
         headers: {
             'Content-Type': 'application/json',
         },
-      });
-      return await response.json();
+      })
+      .then((response) => response.json())
+      const filtered = await response.filter(
+        (element) => element.sensorID == 829993
+      );
+      console.log(filtered);
+
     };
 
 console.log(getData());
