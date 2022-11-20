@@ -10,32 +10,48 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
 
     </head>
+
     <style>
-    body  {
-     	background-image: url(https://images.unsplash.com/photo-1514527893004-f77d3d773644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=929&q=80);
+        body {
+     	font-family: "Open Sans", sans-serif;
+  	    font-size: 16px;
+        background-image: url(https://images.unsplash.com/photo-1514527893004-f77d3d773644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=929&q=80);
       	background-color: lightblue;
+    }
+    
+        h1 {
+  	font-family: Merriweather, serif;
+  	font-size: 40px;
+	}
+    
+        span {
+    border-style: solid;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 3px;
     }
     </style>
 
     <body style="background-color;" class="text-center">  
         
-        <h1>Window tracker</h1>
+        <h1><span>Window tracker</span></h1>
         
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
                 <div class="myDiv text-center">
-            <h2>Time and date:</h2>
+                    <h2><span>Time and date:</span></h2>
             <p>data</p>
             
         </div>
         <div class="myDiv text-center">
-            <h2>CO<sub>2</sub> levels:</h2>
+            <h2><span>CO<sub>2</sub> levels:</span></h2>
             <p>data</p>
         </div>
         <div class="myDiv text-center">
-            <h2 id='command'>Countdown to open window:</h2>
+            <h2 id='command'><span>Countdown to open window:</span></h2>
             <p style="color:black" class="text-center" id="demo"></p>
 
             <script>
