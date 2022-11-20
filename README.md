@@ -1,13 +1,16 @@
 # window_tracking-planet_saving
-Working out optimal window ventilation for heat saving versus carbon dioxide concentrations
+💙 Working out optimal window ventilation for heat saving and in-room carbon dioxide reduction. 
 
+💛 Will shout at you to close the window in time, so you save the heat => save the planet resources.
 
-window tracking - planet saving!
-*making a notification app to
+We have analyzed the CO2 data to see how the general ventilation frequently and duration can be adjusted. This is for the app to fit our building better. Data analysis can be found in #.
 
-Will shout at you to close the window in time - so you save the heat - save the plant resources.
+For the demonstration purposes, however, we've set the timer to be short (30 seconds). 
 
-- ask them about their discord -> how to access the window sensor data;
+.
+.
+.
+
 
 *generic case: no CO2 sensors*
 - research recommended window opening times;
