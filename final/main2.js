@@ -22,13 +22,14 @@ setInterval(async function(url = 'https://durhack20221119161856.azurewebsites.ne
     // True is window is OPEN.
     if (filtered[0]){
         console.log("is it true true? "+filtered[0].dataValue);
+        const timer = document.getElementById("timer");
+        const windowStatus = document.getElementById("windowStatus");
         // True is window is OPEN.
         if ("True|True".localeCompare(filtered[0].dataValue) == 0){
             console.log("IS Open!");
-            const timer = document.getElementById("timer");
             timer.style.display = "block";
-            const windowStatus = document.getElementById("windowStatus");
-            windowStatus.innerHTML = "Window OPEN!!!";
+            
+            windowStatus.innerHTML = "Window IS OPEN!!!";
             
             // starting Window-Open timer: for testing purposes set to 20 seconds
             let now = new Date().getTime();
@@ -50,6 +51,9 @@ setInterval(async function(url = 'https://durhack20221119161856.azurewebsites.ne
                 };
                 //Would check for window closing here - but no time ;(
                 }, 1000)
+        }
+        else if ("False|False".localeCompare(filtered[0].dataValue) == 0) {
+            windowStatus.innerHTML = "We have registered that the window is closed... Try again ?";
         };
         date = dateUpdate();
 
