@@ -47,9 +47,9 @@ setInterval(async function(url = 'https://durhack20221119161856.azurewebsites.ne
             
             // starting Window-Open timer
             let now = new Date().getTime();
-            let newDateObj = new Date().getTime();
+            let newDateObj = new Date(now + 10000);
             let intervalX = setInterval(function(){
-                now = new Date.getTime();
+                now = new Date().getTime();
                 let distance = newDateObj - now;
 
                 let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
